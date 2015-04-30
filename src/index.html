@@ -22,8 +22,8 @@
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
-                <div class="bar" style="width: {{district[payPoint+'-bar']}}px"></div>
-                <div class="bar-number">${{district[payPoint]}}</div>
+                <div class="bar" style="width: {{district[payPoint+'-bar']}}%"></div>
+                <div class="bar-number">${{district[payPoint+'-sum']}}</div>
               </div>
             </div>
             <div class="triangle" ng-show="district == featuredDistrict"></div>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="right">
-         
+          <%= t.include("card.html") %>
         </div>
       </div>
     </div>
