@@ -23,9 +23,11 @@
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
                 <div class="base bar" style="width: {{district['base-'+payPoint+'-bar']}}%"></div>
-                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%"></div>
-                <div class="bar-number">${{district[payPoint+'-sum']}}</div>
+                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%">
+                  <div class="bar-number">${{district[payPoint+'-sum']}}</div>
+                </div>
               </div>
+              <div class="filler"></div>
             </div>
             <div class="triangle" ng-show="district == featuredDistrict"></div>
           </div>
