@@ -1,0 +1,101 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import "seattletimes";
+@import "flexbox";
+
+body {
+  max-width: 900px;
+  font-family: @df-sans;
+  font-size: 14px;
+}
+
+.outer {
+  .display-flex();
+}
+
+.left {
+  .flex(1);
+
+  .row-wrapper {
+    position: relative;
+  }
+
+  .row {
+    .display-flex();
+    padding-bottom: 5px;
+    cursor: pointer;
+
+    .name {
+      .flex(0 0 110px);
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    .bar-container {
+      .flex(1);
+      .display-flex();
+
+      .bar {
+        display: inline-block;
+        height: 20px;
+        background: @light-hue;
+        transition: background .1s linear, width .4s ease-in-out;
+      }
+
+      .bar-number {
+        .flex(0 0 65px);
+        display: inline-block;
+        padding-left: 5px;
+      }
+    }
+
+    &:hover {
+      .bar {
+        background: @middle-hue;
+      }
+    }
+  }
+
+  .selected {
+    .bar {
+      background: @dark-hue !important;
+    }
+    .name, .bar-number {
+      font-weight: bold;
+    }
+  }
+}
+
+.right {
+  .flex(0 0 400px);
+  border: 1px solid @df-border-gray;  
+  padding: 10px 20px;
+  min-width: 150px;
+  -webkit-box-shadow: 4px 4px 8px 0px @df-border-gray;
+  -moz-box-shadow: 4px 4px 8px 0px @df-border-gray;
+  box-shadow: 4px 4px 8px 0px @df-border-gray;
+
+  .name {
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-width: 0 0 1px 1px;
+  border-color: @df-border-gray;
+  border-style: solid;
+  -webkit-transform: translateX(50%) rotate(45deg);
+  transform: translateX(50%) rotate(45deg);
+  background: white;
+}

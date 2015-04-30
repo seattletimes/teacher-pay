@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  
+  <body ng-app="teacher-pay">
+     
+    <div ng-controller="SalaryController" ng-cloak>
+      <div class="outer">
+        <div class="left">
+          <select ng-model="payPoint">
+            <option value="yr1-ba">1 Year BA</option>
+            <option value="yr8-ba90">8 Years BA+90</option>
+            <option value="yr15-ma45">15 Years MA+45</option>
+          </select>
+          <div class="row-wrapper" ng-repeat="district in districts">
+            <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
+              <div class="name">{{district.title}}</div>
+              <div class="bar-container">
+                <div class="bar" style="width: {{district[payPoint+'-bar']}}px"></div>
+                <div class="bar-number">${{district[payPoint]}}</div>
+              </div>
+            </div>
+            <div class="triangle" ng-show="district == featuredDistrict"></div>
+          </div>
+        </div>
+
+        <div class="right">
+         
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var salaryData = <%= JSON.stringify(json.TeacherPay2015_Data) %>
+    </script>
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
