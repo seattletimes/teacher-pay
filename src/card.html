@@ -1,1 +1,31 @@
-<h1 class="name">{{featuredDistrict.title}}</h1>
+<h1 class="name">{{featuredDistrict.title}} School District</h1>
+
+<div>Students: {{featuredDistrict["fte-students"]}}</div>
+<div>Teachers (full time): {{featuredDistrict["fte-teachers"]}}</div>
+<div>Teachers (total): {{featuredDistrict["actual-teachers"]}}</div>
+<div>Avg experience: {{featuredDistrict["avg-exp"]}} years</div>
+
+<table>
+  <th>Experience</th>
+  <th>Base Salary</th>
+  <th>TRI Pay</th>
+  <th>Total</th>
+  <tr>
+    <td>1 Year BA</td>
+    <td>${{featuredDistrict["base-yr1-ba"]}}</td>
+    <td>${{featuredDistrict["tri-yr1-ba"]}}</td>
+    <td>${{featuredDistrict["yr1-ba-sum"]}}</td>
+  </tr>
+  <tr>
+    <td>8 Years BA+90</td>
+    <td>${{featuredDistrict["base-yr8-ba90"]}}</td>
+    <td>${{featuredDistrict["tri-yr8-ba90"]}}</td>
+    <td>${{featuredDistrict["yr8-ba90-sum"]}}</td>
+  </tr>
+  <tr>
+    <td>15 Years MA+45</td>
+    <td>${{featuredDistrict["base-yr15-ma45"]}}</td>
+    <td>${{featuredDistrict["tri-yr15-ma45"]}}</td>
+    <td>${{featuredDistrict["yr15-ma45-sum"]}}</td>
+  </tr>
+</table>
