@@ -43,8 +43,14 @@ body {
       .bar {
         display: inline-block;
         height: 20px;
-        background: @light-hue;
         transition: background .1s linear, width .4s ease-in-out;
+
+        &.base {
+          background: @light-base;
+        }
+        &.tri {
+          background: @light-tri;
+        }
       }
 
       .bar-number {
@@ -55,15 +61,23 @@ body {
     }
 
     &:hover {
-      .bar {
-        background: @middle-hue;
+      &.base {
+        background: @middle-base;
+      }
+      &.tri {
+        background: @middle-tri;
       }
     }
   }
 
   .selected {
     .bar {
-      background: @dark-hue !important;
+      &.base {
+        background: @dark-base !important;
+      }
+      &.tri {
+        background: @dark-tri !important;
+      }
     }
     .name, .bar-number {
       font-weight: bold;

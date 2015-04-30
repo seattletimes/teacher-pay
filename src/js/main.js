@@ -26,8 +26,9 @@ var seattle = salaryData.filter(function(district) { return district.title == "S
 app.controller("SalaryController", ["$scope", function($scope) {
   $scope.districts = salaryData.map(function(district) {
     barMeasures.forEach(function(point) {
-      if (district[point+"-sum"]) {
-        district[point+"-bar"] = district[point+"-sum"] / max * 100;
+      if (district["base-"+point] && district["tri-"+point]) {
+        district["base-"+point+"-bar"] = district["base-"+point] / max * 100;
+        district["tri-"+point+"-bar"] = district["tri-"+point] / max * 100;
       }
     })
     return district;

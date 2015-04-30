@@ -22,7 +22,8 @@
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
-                <div class="bar" style="width: {{district[payPoint+'-bar']}}%"></div>
+                <div class="base bar" style="width: {{district['base-'+payPoint+'-bar']}}%"></div>
+                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%"></div>
                 <div class="bar-number">${{district[payPoint+'-sum']}}</div>
               </div>
             </div>
