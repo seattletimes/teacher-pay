@@ -11,20 +11,18 @@
   <body ng-app="teacher-pay">
      
     <div ng-controller="SalaryController" ng-cloak>
+      <div class="title">How Much Are Teachers Paid In Washington State?</div>
+      <div class="chatter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa in nunc suscipit molestie. Nulla sagittis bibendum tellus. Nulla porttitor turpis et feugiat dictum. Duis nibh leo, malesuada euismod tristique quis, facilisis sit amet ipsum. Donec aliquam suscipit fringilla.</div>
+
       <div class="outer">
         <div class="left">
-          <select ng-model="payPoint">
-            <option value="yr1-ba">1 Year BA</option>
-            <option value="yr8-ba90">8 Years BA+90</option>
-            <option value="yr15-ma45">15 Years MA+45</option>
-          </select>
           <div class="row-wrapper" ng-repeat="district in districts">
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
-                <div class="base bar" style="width: {{district['base-'+payPoint+'-bar']}}%"></div>
-                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%">
-                  <div class="bar-number">${{district[payPoint+'-sum']}}</div>
+                <div class="base bar" style="width: {{district['base-yr8-ba90-bar']}}%"></div>
+                <div class="tri bar" style="width: {{district['tri-yr8-ba90-bar']}}%">
+                  <div class="bar-number">${{district['sum-yr8-ba90']}}</div>
                 </div>
               </div>
               <div class="filler"></div>

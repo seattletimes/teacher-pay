@@ -11,7 +11,10 @@
     "base-yr15-ma45": "62323",
     "tri-yr1-ba": "9450",
     "tri-yr8-ba90": "12726",
-    "tri-yr15-ma45": "18607"
+    "tri-yr15-ma45": "18607",
+    "sum-yr1-ba": "44131",
+    "sum-yr8-ba90": "57274",
+    "sum-yr15-ma45": "80930"
   },
   {
     "title": "Bethel",
@@ -25,7 +28,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "5977",
     "tri-yr8-ba90": "7739",
-    "tri-yr15-ma45": "10307"
+    "tri-yr15-ma45": "10307",
+    "sum-yr1-ba": "40025",
+    "sum-yr8-ba90": "51818",
+    "sum-yr15-ma45": "69023"
   },
   {
     "title": "Edmonds",
@@ -39,7 +45,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "10038",
     "tri-yr8-ba90": "12908",
-    "tri-yr15-ma45": "17215"
+    "tri-yr15-ma45": "17215",
+    "sum-yr1-ba": "44086",
+    "sum-yr8-ba90": "56987",
+    "sum-yr15-ma45": "75931"
   },
   {
     "title": "Everett",
@@ -53,7 +62,10 @@
     "base-yr15-ma45": "63868",
     "tri-yr1-ba": "11104",
     "tri-yr8-ba90": "18790",
-    "tri-yr15-ma45": "25714"
+    "tri-yr15-ma45": "25714",
+    "sum-yr1-ba": "44505",
+    "sum-yr8-ba90": "65589",
+    "sum-yr15-ma45": "89582"
   },
   {
     "title": "Evergreen (Clark)",
@@ -67,7 +79,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "4852",
     "tri-yr8-ba90": "6281",
-    "tri-yr15-ma45": "8367"
+    "tri-yr15-ma45": "8367",
+    "sum-yr1-ba": "38900",
+    "sum-yr8-ba90": "50360",
+    "sum-yr15-ma45": "67083"
   },
   {
     "title": "Federal Way",
@@ -81,7 +96,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "5005",
     "tri-yr8-ba90": "6480",
-    "tri-yr15-ma45": "8631"
+    "tri-yr15-ma45": "8631",
+    "sum-yr1-ba": "39053",
+    "sum-yr8-ba90": "50559",
+    "sum-yr15-ma45": "67347"
   },
   {
     "title": "Highline",
@@ -95,7 +113,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "7150",
     "tri-yr8-ba90": "9257",
-    "tri-yr15-ma45": "12330"
+    "tri-yr15-ma45": "12330",
+    "sum-yr1-ba": "41198",
+    "sum-yr8-ba90": "53336",
+    "sum-yr15-ma45": "71046"
   },
   {
     "title": "Issaquah",
@@ -109,7 +130,10 @@
     "base-yr15-ma45": "59114",
     "tri-yr1-ba": "4344",
     "tri-yr8-ba90": "5777",
-    "tri-yr15-ma45": "7537"
+    "tri-yr15-ma45": "7537",
+    "sum-yr1-ba": "38414",
+    "sum-yr8-ba90": "51090",
+    "sum-yr15-ma45": "66651"
   },
   {
     "title": "Kennewick",
@@ -123,7 +147,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "",
     "tri-yr8-ba90": "",
-    "tri-yr15-ma45": ""
+    "tri-yr15-ma45": "",
+    "sum-yr1-ba": "",
+    "sum-yr8-ba90": "",
+    "sum-yr15-ma45": ""
   },
   {
     "title": "Kent",
@@ -137,7 +164,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "6620",
     "tri-yr8-ba90": "8571",
-    "tri-yr15-ma45": "11417"
+    "tri-yr15-ma45": "11417",
+    "sum-yr1-ba": "40668",
+    "sum-yr8-ba90": "52650",
+    "sum-yr15-ma45": "70133"
   },
   {
     "title": "Lake Washington",
@@ -151,7 +181,10 @@
     "base-yr15-ma45": "59151",
     "tri-yr1-ba": "",
     "tri-yr8-ba90": "",
-    "tri-yr15-ma45": ""
+    "tri-yr15-ma45": "",
+    "sum-yr1-ba": "",
+    "sum-yr8-ba90": "",
+    "sum-yr15-ma45": ""
   },
   {
     "title": "Mukilteo",
@@ -165,7 +198,10 @@
     "base-yr15-ma45": "56449",
     "tri-yr1-ba": "7760",
     "tri-yr8-ba90": "12796",
-    "tri-yr15-ma45": "12865"
+    "tri-yr15-ma45": "12865",
+    "sum-yr1-ba": "41808",
+    "sum-yr8-ba90": "59837",
+    "sum-yr15-ma45": "69314"
   },
   {
     "title": "Northshore",
@@ -179,7 +215,10 @@
     "base-yr15-ma45": "61102",
     "tri-yr1-ba": "8367",
     "tri-yr8-ba90": "10779",
-    "tri-yr15-ma45": "14281"
+    "tri-yr15-ma45": "14281",
+    "sum-yr1-ba": "43743",
+    "sum-yr8-ba90": "56649",
+    "sum-yr15-ma45": "75383"
   },
   {
     "title": "Pasco",
@@ -193,7 +232,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "",
     "tri-yr8-ba90": "",
-    "tri-yr15-ma45": ""
+    "tri-yr15-ma45": "",
+    "sum-yr1-ba": "",
+    "sum-yr8-ba90": "",
+    "sum-yr15-ma45": "58716"
   },
   {
     "title": "Puyallup",
@@ -207,7 +249,10 @@
     "base-yr15-ma45": "59897",
     "tri-yr1-ba": "4151",
     "tri-yr8-ba90": "5374",
-    "tri-yr15-ma45": "7158"
+    "tri-yr15-ma45": "7158",
+    "sum-yr1-ba": "38884",
+    "sum-yr8-ba90": "50340",
+    "sum-yr15-ma45": "67055"
   },
   {
     "title": "Seattle",
@@ -221,7 +266,10 @@
     "base-yr15-ma45": "60661",
     "tri-yr1-ba": "10324",
     "tri-yr8-ba90": "14654",
-    "tri-yr15-ma45": "19127"
+    "tri-yr15-ma45": "19127",
+    "sum-yr1-ba": "44372",
+    "sum-yr8-ba90": "58733",
+    "sum-yr15-ma45": "79788"
   },
   {
     "title": "Spokane",
@@ -235,7 +283,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "",
     "tri-yr8-ba90": "",
-    "tri-yr15-ma45": ""
+    "tri-yr15-ma45": "",
+    "sum-yr1-ba": "",
+    "sum-yr8-ba90": "",
+    "sum-yr15-ma45": ""
   },
   {
     "title": "Tacoma",
@@ -249,7 +300,10 @@
     "base-yr15-ma45": "",
     "tri-yr1-ba": "",
     "tri-yr8-ba90": "",
-    "tri-yr15-ma45": ""
+    "tri-yr15-ma45": "",
+    "sum-yr1-ba": "",
+    "sum-yr8-ba90": "",
+    "sum-yr15-ma45": ""
   },
   {
     "title": "Vancouver",
@@ -263,7 +317,10 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "5485",
     "tri-yr8-ba90": "5485",
-    "tri-yr15-ma45": "5727"
+    "tri-yr15-ma45": "5727",
+    "sum-yr1-ba": "39533",
+    "sum-yr8-ba90": "49564",
+    "sum-yr15-ma45": "64443"
   },
   {
     "title": "Yakima",
@@ -277,6 +334,9 @@
     "base-yr15-ma45": "58716",
     "tri-yr1-ba": "919",
     "tri-yr8-ba90": "1190",
-    "tri-yr15-ma45": "1585"
+    "tri-yr15-ma45": "1585",
+    "sum-yr1-ba": "34967",
+    "sum-yr8-ba90": "45269",
+    "sum-yr15-ma45": "60301"
   }
 ]
