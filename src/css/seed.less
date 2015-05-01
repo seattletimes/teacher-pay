@@ -182,9 +182,14 @@ body {
 }
 
 .close {
+  display: none;
   position: absolute;
   right: 0;
   padding-top: 12px;
   padding-right: 20px;
   font-size: 18px;
+
+  .mobile-show & {
+    display: block;
+  }
 }
