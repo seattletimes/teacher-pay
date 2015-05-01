@@ -26,7 +26,10 @@ app.controller("SalaryController", ["$scope", function($scope) {
 
   $scope.featuredDistrict = seattle;
 
+  $scope.dialogue = false;
+
   $scope.setDistrict = function(district) {
     $scope.featuredDistrict = district;
+    $scope.dialogue = true;
   };
 }]);

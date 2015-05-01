@@ -28,10 +28,15 @@ body {
 
 .outer {
   .display-flex();
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .left {
   .flex(1);
+  padding-top: 20px;
 
   .row-wrapper {
     position: relative;
@@ -46,6 +51,10 @@ body {
       .flex(0 0 110px);
       text-align: right;
       padding-right: 10px;
+
+      @media @mobile {
+        .flex(0 0 84px);
+      }
     }
 
     .bar-container {
@@ -101,14 +110,51 @@ body {
   }
 }
 
-.right {
+.modal {
+  .display-flex();
   .flex(0 0 400px);
+
+  @media @tablet {
+    .flex(0 0 340px);
+  }
+
+  @media @mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.4);
+
+    &.mobile-show {
+      display: block;
+    }
+  }
+}
+
+.right {
+  .flex(1);
   border: 1px solid @df-border-gray;  
   padding: 10px 20px;
   min-width: 150px;
   -webkit-box-shadow: 4px 4px 8px 0px @df-border-gray;
   -moz-box-shadow: 4px 4px 8px 0px @df-border-gray;
   box-shadow: 4px 4px 8px 0px @df-border-gray;
+  background: #FFFAF0;
+  position: relative;
+
+  @media @mobile {
+    position: fixed;
+    bottom: 25%;
+    margin: 7%;
+
+    .mobile-show & {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
 
   .name {
     margin: 0;
@@ -117,6 +163,7 @@ body {
 }
 
 .triangle {
+  z-index: 9;
   position: absolute;
   top: 0;
   right: 0;
@@ -127,5 +174,17 @@ body {
   border-style: solid;
   -webkit-transform: translateX(50%) rotate(45deg);
   transform: translateX(50%) rotate(45deg);
-  background: white;
+  background: #FFFAF0;
+
+  @media @mobile {
+    display: none;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  padding-top: 12px;
+  padding-right: 20px;
+  font-size: 18px;
 }
