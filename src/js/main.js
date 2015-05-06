@@ -37,15 +37,21 @@ app.controller("SalaryController", ["$scope", function($scope) {
   $scope.featuredDistrict = seattle;
   $scope.dialogue = false;
 
-  $scope.districts = salaryData.sort(function(a,b) {
-    return (b["sum-"+$scope.payPoint] * 1) - (a["sum-"+$scope.payPoint] * 1);
-  });
+  $scope.sortDistricts = function() {
+    $scope.districts = salaryData.sort(function(a,b) {
+      return (b["sum-"+$scope.payPoint] * 1) - (a["sum-"+$scope.payPoint] * 1);
+    });
+  };
 
   $scope.setDistrict = function(district) {
     $scope.featuredDistrict = district;
     $scope.dialogue = true;
   };
+
   $scope.setPayPoint = function(point) {
     $scope.payPoint = point;
+    $scope.sortDistricts();
   };
+
+  $scope.sortDistricts();
 }]);
