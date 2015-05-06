@@ -17,10 +17,10 @@
 
       <div class="outer">
         <div class="left">
-
-          <div ng-click="setPayPoint('low')">Low</div>
-          <div ng-click="setPayPoint('middle')">Middle</div>
-          <div ng-click="setPayPoint('high')">High</div>
+          Experience level:
+          <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">Low</div> <span class="divider">|</span>
+          <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Middle</div> <span class="divider">|</span>
+          <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">High</div>
 
           <div class="row-wrapper" ng-repeat="district in districts | orderBy:ordering" flip-on>
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >

@@ -19,11 +19,13 @@ body {
   font-size: 24px;
   text-align: center;
   padding-bottom: 5px;
+  font-family: @df-serif;
 }
 
 .chatter {
   font-size: 15px;
   padding-bottom: 15px;
+  font-family: @df-serif;
 }
 
 .outer {
@@ -36,7 +38,26 @@ body {
 
 .left {
   .flex(1);
-  padding-top: 20px;
+
+  .point-button {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    &.selected {
+      font-weight: bold;
+    }
+  }
+  .divider {
+    color: @df-light-gray;
+  }
 
   .row-wrapper {
     position: relative;
@@ -145,7 +166,6 @@ body {
   -moz-box-shadow: 4px 4px 8px 0px @df-border-gray;
   box-shadow: 4px 4px 8px 0px @df-border-gray;
   background: #FFFAF0;
-  position: relative;
 
   @media @mobile {
     position: fixed;
