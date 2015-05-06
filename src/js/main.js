@@ -5,31 +5,47 @@ require("angular");
 
 var app = angular.module("teacher-pay", []);
 
-var middle = "yr8-ba90";
-var max = Math.max.apply(null, salaryData.map(function(district) {
-  return district["sum-"+middle] ? district["sum-"+middle] * 1 : 0;
-}));
+var barMeasures = ["low", "middle", "high"];
+var max = 0;
 
-salaryData.forEach(function(district) {
-  if (district["base-"+middle] && district["tri-"+middle]) {
-    district["base-"+middle+"-bar"] = district["base-"+middle] / max * 100;
-    district["tri-"+middle+"-bar"] = district["tri-"+middle] / max * 100;
-  }
+salaryData.map(function(district) {
+  barMeasures.forEach(function(point) {
+    if (district["base-"+point] && district["tri-"+point]) {
+      district["base-"+point] = district["base-"+point] * 1;
+      district["tri-"+point] = district["tri-"+point] * 1;
+      district[point+"-sum"] = (district["base-"+point] + district["tri-"+point]);
+
+      if (district[point+"-sum"] > max) { max = district[point+"-sum"] }
+    }
+  })
+  return district;
+});
+salaryData.map(function(district) {
+  barMeasures.forEach(function(point) {
+    if (district["base-"+point] && district["tri-"+point]) {
+      district["base-"+point+"-bar"] = district["base-"+point] / max * 100;
+      district["tri-"+point+"-bar"] = district["tri-"+point] / max * 100;
+    }
+  })
+  return district;
 });
 
 var seattle = salaryData.filter(function(district) { return district.title == "Seattle" })[0];
 
 app.controller("SalaryController", ["$scope", function($scope) {
-  $scope.districts = salaryData.sort(function(a,b) {
-    return (b["sum-"+middle] * 1) - (a["sum-"+middle] * 1);
-  });
-
+  $scope.payPoint = "middle";
   $scope.featuredDistrict = seattle;
-
   $scope.dialogue = false;
+
+  $scope.districts = salaryData.sort(function(a,b) {
+    return (b["sum-"+$scope.payPoint] * 1) - (a["sum-"+$scope.payPoint] * 1);
+  });
 
   $scope.setDistrict = function(district) {
     $scope.featuredDistrict = district;
     $scope.dialogue = true;
+  };
+  $scope.setPayPoint = function(point) {
+    $scope.payPoint = point;
   };
 }]);

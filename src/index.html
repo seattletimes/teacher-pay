@@ -17,13 +17,18 @@
 
       <div class="outer">
         <div class="left">
+
+          <div ng-click="setPayPoint('low')">Low</div>
+          <div ng-click="setPayPoint('middle')">Middle</div>
+          <div ng-click="setPayPoint('high')">High</div>
+
           <div class="row-wrapper" ng-repeat="district in districts">
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
-                <div class="base bar" style="width: {{district['base-yr8-ba90-bar']}}%"></div>
-                <div class="tri bar" style="width: {{district['tri-yr8-ba90-bar']}}%">
-                  <div class="bar-number">${{district['sum-yr8-ba90']}}</div>
+                <div class="base bar" style="width: {{district['base-'+payPoint+'-bar']}}%"></div>
+                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%">
+                  <div class="bar-number">${{district['sum-'+payPoint]}}</div>
                 </div>
               </div>
               <div class="filler"></div>
