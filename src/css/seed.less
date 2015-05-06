@@ -42,10 +42,11 @@ body {
   .point-button {
     display: inline-block;
     padding: 5px 10px;
-    border-radius: 3px;
     text-transform: uppercase;
     margin-bottom: 10px;
     cursor: pointer;
+    text-decoration: underline;
+    color: @df-charcoal;
 
     &:hover {
       font-weight: bold;
@@ -53,6 +54,7 @@ body {
 
     &.selected {
       font-weight: bold;
+      color: black;
     }
   }
   .divider {
@@ -137,6 +139,7 @@ body {
 .modal {
   .display-flex();
   .flex(0 0 400px);
+  padding-top: 22px;
 
   @media @tablet {
     .flex(0 0 340px);
@@ -159,13 +162,9 @@ body {
 
 .right {
   .flex(1);
-  border: 1px solid @df-border-gray;  
-  padding: 10px 20px;
+  padding: 30px 40px;
   min-width: 150px;
-  -webkit-box-shadow: 4px 4px 8px 0px @df-border-gray;
-  -moz-box-shadow: 4px 4px 8px 0px @df-border-gray;
-  box-shadow: 4px 4px 8px 0px @df-border-gray;
-  background: #FFFAF0;
+  background: @df-off-white;
 
   @media @mobile {
     position: fixed;
@@ -181,7 +180,14 @@ body {
 
   .name {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .line {
+    border-bottom: 2px solid @df-border-gray;
+    width: 75%;
+    margin: 5px auto;
   }
 }
 
@@ -193,11 +199,11 @@ body {
   width: 20px;
   height: 20px;
   border-width: 0 0 1px 1px;
-  border-color: @df-border-gray;
+  border-color: @df-light-gray;
   border-style: solid;
   -webkit-transform: translateX(50%) rotate(45deg);
   transform: translateX(50%) rotate(45deg);
-  background: #FFFAF0;
+  background: @df-off-white;
 
   @media @mobile {
     display: none;

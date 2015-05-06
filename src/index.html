@@ -15,12 +15,14 @@
       <div class="title">How Much Are Teachers Paid In Washington State?</div>
       <div class="chatter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa in nunc suscipit molestie. Nulla sagittis bibendum tellus. Nulla porttitor turpis et feugiat dictum. Duis nibh leo, malesuada euismod tristique quis, facilisis sit amet ipsum. Donec aliquam suscipit fringilla.</div>
 
+      <div class="chatter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa in nunc suscipit molestie. Nulla sagittis bibendum tellus. Nulla porttitor turpis et feugiat dictum.</div>
+
       <div class="outer">
         <div class="left">
           Experience level:
-          <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">Low</div> <span class="divider">|</span>
-          <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Middle</div> <span class="divider">|</span>
-          <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">High</div>
+          <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">Entry-level</div> <span class="divider">|</span>
+          <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Experienced</div> <span class="divider">|</span>
+          <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">Legendary</div>
 
           <div class="row-wrapper" ng-repeat="district in districts | orderBy:ordering" flip-on>
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >

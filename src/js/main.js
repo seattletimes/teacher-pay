@@ -35,17 +35,14 @@ salaryData.map(function(district) {
 var seattle = salaryData.filter(function(district) { return district.title == "Seattle" })[0];
 
 app.controller("SalaryController", ["$scope", "$timeout", function($scope, $timeout) {
-  $scope.payPoint = "high";
+  $scope.payPoint = "middle";
   $scope.featuredDistrict = seattle;
   $scope.dialogue = false;
   $scope.districts = salaryData;
-  $scope.ordering = "sum-high";
 
-  // $scope.sortDistricts = function() {
-    $scope.districts.sort(function(a,b) {
-      return (b["sum-"+$scope.payPoint] * 1) - (a["sum-"+$scope.payPoint] * 1);
-    });
-  // };
+  $scope.districts.sort(function(a,b) {
+    return (b["sum-"+$scope.payPoint] * 1) - (a["sum-"+$scope.payPoint] * 1);
+  });
 
   $scope.setDistrict = function(district) {
     $scope.featuredDistrict = district;
@@ -59,6 +56,4 @@ app.controller("SalaryController", ["$scope", "$timeout", function($scope, $time
   $scope.setPayPoint = function(point) {
     $scope.payPoint = point;
   };
-
-  // $scope.sortDistricts();
 }]);
