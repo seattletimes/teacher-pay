@@ -22,12 +22,12 @@
           <div ng-click="setPayPoint('middle')">Middle</div>
           <div ng-click="setPayPoint('high')">High</div>
 
-          <div class="row-wrapper" ng-repeat="district in districts">
+          <div class="row-wrapper" ng-repeat="district in districts | orderBy:ordering" flip-on>
             <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
               <div class="name">{{district.title}}</div>
               <div class="bar-container">
-                <div class="base bar" style="width: {{district['base-'+payPoint+'-bar']}}%"></div>
-                <div class="tri bar" style="width: {{district['tri-'+payPoint+'-bar']}}%">
+                <div class="base bar" delayed-style="{ width: district['base-'+payPoint+'-bar'] + '%' }"></div>
+                <div class="tri bar" delayed-style="{ width: district['tri-'+payPoint+'-bar'] + '%' }">
                   <div class="bar-number">${{district['sum-'+payPoint]}}</div>
                 </div>
               </div>
