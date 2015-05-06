@@ -19,7 +19,6 @@ body {
   font-size: 24px;
   text-align: center;
   padding-bottom: 5px;
-  font-family: @df-serif;
 }
 
 .chatter {
@@ -46,7 +45,7 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     text-decoration: underline;
-    color: @df-charcoal;
+    color: @df-dark-gray;
 
     &:hover {
       font-weight: bold;
@@ -74,7 +73,7 @@ body {
     cursor: pointer;
 
     .name {
-      .flex(0 0 110px);
+      .flex(0 0 122px);
       text-align: right;
       padding-right: 10px;
 
@@ -165,6 +164,7 @@ body {
   padding: 30px 40px;
   min-width: 150px;
   background: @df-off-white;
+  text-align: center;
 
   @media @mobile {
     position: fixed;
@@ -188,6 +188,30 @@ body {
     border-bottom: 2px solid @df-border-gray;
     width: 75%;
     margin: 5px auto;
+  }
+
+  .label {
+    padding-top: 15px;
+    color: @df-dark-gray;
+  }
+
+  .value {
+    font-size: 20px;
+  }
+
+  table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: right;
+
+    th, td {
+      border-bottom: 1px solid @df-light-gray;
+      padding: 2px 6px;
+    }
+
+    .number {
+      font-size: 16px;
+    }
   }
 }
 

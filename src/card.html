@@ -4,32 +4,36 @@
 
 <div class="line"></div>
 
-<div>Students: {{featuredDistrict["fte-students"]}}</div>
-<div>Teachers (full time): {{featuredDistrict["fte-teachers"]}}</div>
-<div>Teachers (total): {{featuredDistrict["actual-teachers"]}}</div>
-<div>Avg experience: {{featuredDistrict["avg-exp"]}} years</div>
+<div class="label">Students</div>
+<div class="value">{{featuredDistrict["fte-students"].toLocaleString()}}</div>
+<div class="label">Teachers<br><em>(full-time equivalent)</em></div>
+<div class="value">{{featuredDistrict["fte-teachers"].toLocaleString()}}</div>
+<div class="label">Student-to-teacher ratio</div>
+<div class="value">tktk</div>
+<div class="label">Average experience</div> 
+<div class="value">{{featuredDistrict["avg-exp"]}} years</div>
 
 <table>
-  <th>Experience</th>
+  <th></th>
   <th>Base Salary</th>
   <th>TRI Pay</th>
   <th>Total</th>
   <tr>
-    <td>1 Year BA</td>
-    <td>${{featuredDistrict["base-low"]}}</td>
-    <td>${{featuredDistrict["tri-low"]}}</td>
-    <td>${{featuredDistrict["sum-low"]}}</td>
+    <td>Entry-level</td>
+    <td class="number">${{featuredDistrict["base-low"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["tri-low"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["sum-low"].toLocaleString()}}</td>
   </tr>
   <tr>
-    <td>8 Years BA+90</td>
-    <td>${{featuredDistrict["base-middle"]}}</td>
-    <td>${{featuredDistrict["tri-middle"]}}</td>
-    <td>${{featuredDistrict["sum-middle"]}}</td>
+    <td>Experienced</td>
+    <td class="number">${{featuredDistrict["base-middle"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["tri-middle"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["sum-middle"].toLocaleString()}}</td>
   </tr>
   <tr>
-    <td>15 Years MA+45</td>
-    <td>${{featuredDistrict["base-high"]}}</td>
-    <td>${{featuredDistrict["tri-high"]}}</td>
-    <td>${{featuredDistrict["sum-high"]}}</td>
+    <td>Legendary</td>
+    <td class="number">${{featuredDistrict["base-high"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["tri-high"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["sum-high"].toLocaleString()}}</td>
   </tr>
 </table>

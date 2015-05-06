@@ -13,11 +13,13 @@ var max = 0;
 salaryData.map(function(district) {
   barMeasures.forEach(function(point) {
     if (district["base-"+point] && district["tri-"+point]) {
+      district["fte-students"] = district["fte-students"] * 1;
+      district["fte-teachers"] = district["fte-teachers"] * 1;
       district["base-"+point] = district["base-"+point] * 1;
       district["tri-"+point] = district["tri-"+point] * 1;
-      district[point+"-sum"] = (district["base-"+point] + district["tri-"+point]);
+      district["sum-"+point] = district["sum-"+point] * 1;
 
-      if (district[point+"-sum"] > max) { max = district[point+"-sum"] }
+      if (district["sum-"+point] > max) { max = district["sum-"+point] }
     }
   })
   return district;
