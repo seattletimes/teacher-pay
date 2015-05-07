@@ -8,8 +8,15 @@ module.exports = function(app) {
       restrict: "A",
       link: function(scope, el, attr) {
         el = el[0];
-        var first = el.getBoundingClientRect();
-        scope.$watch("$index", function() {
+        var first;
+        scope.$watch("$index", function(now, then) {
+          if (now == then || typeof then == "undefined") {
+            var _ = el.offsetWidth;
+            //obnoxious, but give other watches a chance to run
+            setTimeout(() => first = el.getBoundingClientRect(), 100);
+            return;
+          }
+          if (!first) return;
           var last = el.getBoundingClientRect();
           var dx = first.left - last.left;
           var dy = first.top - last.top;
