@@ -38,6 +38,11 @@ body {
 .left {
   .flex(1);
 
+  .point-label {
+    @media @mobile {
+      display: none;
+    }
+  }
   .point-button {
     display: inline-block;
     padding: 5px 10px;
@@ -46,6 +51,10 @@ body {
     cursor: pointer;
     text-decoration: underline;
     color: @df-dark-gray;
+
+    @media @mobile {
+      padding: 5px 5px 12px 5px;
+    }
 
     &:hover {
       font-weight: bold;
@@ -162,14 +171,14 @@ body {
 .right {
   .flex(1);
   padding: 30px 40px;
-  min-width: 150px;
   background: @df-off-white;
   text-align: center;
 
   @media @mobile {
+    padding: 20px;
     position: fixed;
-    bottom: 25%;
-    margin: 7%;
+    right: 3%;
+    left: 3%;
 
     .mobile-show & {
       -webkit-box-shadow: none;
@@ -182,6 +191,10 @@ body {
     margin: 0;
     font-size: 22px;
     text-align: center;
+
+    @media @mobile {
+      font-size: 18px;
+    }
   }
 
   .line {
@@ -193,16 +206,29 @@ body {
   .label {
     padding-top: 15px;
     color: @df-dark-gray;
+
+    @media @mobile {
+      padding-top: 8px;
+    }
   }
 
   .value {
     font-size: 20px;
+
+    @media @mobile {
+      font-size: 18px;
+    }
   }
 
   table {
     margin-top: 20px;
     border-collapse: collapse;
     text-align: right;
+
+    @media @mobile {
+      font-size: 12px;
+      margin-top: 14px;
+    }
 
     th, td {
       border-bottom: 1px solid @df-light-gray;
@@ -211,6 +237,10 @@ body {
 
     .number {
       font-size: 16px;
+
+      @media @mobile {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -238,9 +268,11 @@ body {
   display: none;
   position: absolute;
   right: 0;
-  padding-top: 12px;
-  padding-right: 20px;
+  top: 0;
+  padding-top: 8px;
+  padding-right: 8px;
   font-size: 18px;
+  color: @df-dark-gray;
 
   .mobile-show & {
     display: block;
