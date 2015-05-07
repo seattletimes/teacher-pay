@@ -37,6 +37,7 @@ body {
 
 .left {
   .flex(1);
+  padding-bottom: 12px;
 
   .point-label {
     @media @mobile {
@@ -52,7 +53,7 @@ body {
     text-decoration: underline;
     color: @df-dark-gray;
 
-    @media @mobile {
+    @media @tablet {
       padding: 5px 5px 12px 5px;
     }
 
@@ -85,10 +86,6 @@ body {
       .flex(0 0 122px);
       text-align: right;
       padding-right: 10px;
-
-      @media @mobile {
-        .flex(0 0 84px);
-      }
     }
 
     .bar-container {
@@ -99,6 +96,7 @@ body {
         position: relative;
         height: 20px;
         transition: background .1s linear, width .4s ease-in-out;
+
 
         &.base {
           background: @light-base;
@@ -147,7 +145,7 @@ body {
 .modal {
   .display-flex();
   .flex(0 0 400px);
-  padding-top: 22px;
+  padding-top: 26px;
 
   @media @tablet {
     .flex(0 0 340px);
@@ -225,6 +223,10 @@ body {
     border-collapse: collapse;
     text-align: right;
 
+    @media @tablet {
+      font-size: 13px;
+    }
+
     @media @mobile {
       font-size: 12px;
       margin-top: 14px;
@@ -238,7 +240,7 @@ body {
     .number {
       font-size: 16px;
 
-      @media @mobile {
+      @media @tablet {
         font-size: 12px;
       }
     }
@@ -250,8 +252,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-width: 0 0 1px 1px;
   border-color: @df-light-gray;
   border-style: solid;
@@ -277,4 +279,9 @@ body {
   .mobile-show & {
     display: block;
   }
+}
+
+.source, .credit {
+  font-size: 11.5px;
+  color: @df-middle-gray;
 }

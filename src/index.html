@@ -19,7 +19,7 @@
 
       <div class="outer">
         <div class="left">
-          <div class="point-label"><em>Experience level:</em></div>
+          <span class="point-label"><em>Experience level:</em></span>
           <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">Entry-level</div> <span class="divider">|</span>
           <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Experienced</div> <span class="divider">|</span>
           <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">Legendary</div>
@@ -46,6 +46,9 @@
       </div>
       </div>
     </div>
+
+    <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
+    <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
 
     <script>
       var salaryData = <%= JSON.stringify(json.TeacherPay2015_Data) %>
