@@ -5,9 +5,9 @@
 <div class="line"></div>
 
 <div class="label">Students</div>
-<div class="value">{{featuredDistrict["fte-students"].toLocaleString()}}</div>
+<div class="value">{{featuredDistrict["fte-students"] | number : 0}}</div>
 <div class="label">Teachers<br><em>(full-time equivalent)</em></div>
-<div class="value">{{featuredDistrict["fte-teachers"].toLocaleString()}}</div>
+<div class="value">{{featuredDistrict["fte-teachers"] | number : 0}}</div>
 <div class="label">Students per teacher</div>
 <div class="value">{{featuredDistrict["students-per-teacher"]}}</div>
 <div class="label">Average experience</div> 
@@ -20,20 +20,20 @@
   <th>Total</th>
   <tr>
     <td>Entry-level</td>
-    <td class="number">${{featuredDistrict["base-low"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["tri-low"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["sum-low"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["base-low"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["tri-low"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["sum-low"] | number : 0}}</td>
   </tr>
   <tr>
     <td>Experienced</td>
-    <td class="number">${{featuredDistrict["base-middle"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["tri-middle"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["sum-middle"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["base-middle"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["tri-middle"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["sum-middle"] | number : 0}}</td>
   </tr>
   <tr>
     <td>Legendary</td>
-    <td class="number">${{featuredDistrict["base-high"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["tri-high"].toLocaleString()}}</td>
-    <td class="number">${{featuredDistrict["sum-high"].toLocaleString()}}</td>
+    <td class="number">${{featuredDistrict["base-high"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["tri-high"] | number : 0}}</td>
+    <td class="number">${{featuredDistrict["sum-high"] | number : 0}}</td>
   </tr>
 </table>

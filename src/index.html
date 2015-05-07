@@ -30,7 +30,7 @@
               <div class="bar-container">
                 <div class="base bar" delayed-style="{ width: district['base-'+payPoint+'-bar'] + '%' }"></div>
                 <div class="tri bar" delayed-style="{ width: district['tri-'+payPoint+'-bar'] + '%' }">
-                  <div class="bar-number">${{district['sum-'+payPoint].toLocaleString()}}</div>
+                  <div class="bar-number">${{district['sum-'+payPoint] | number : 0}}</div>
                 </div>
               </div>
               <div class="filler"></div>
