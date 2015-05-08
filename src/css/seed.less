@@ -265,7 +265,7 @@ body {
   width: 16px;
   height: 16px;
   border-width: 0 0 1px 1px;
-  border-color: @df-light-gray;
+  border-color: @df-border-gray;
   border-style: solid;
   -webkit-transform: translateX(50%) rotate(45deg);
   transform: translateX(50%) rotate(45deg);
@@ -286,7 +286,7 @@ body {
   font-size: 18px;
   color: @df-dark-gray;
 
-  .mobile-show & {
+  @media @mobile {
     display: block;
   }
 }
