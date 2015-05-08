@@ -114,7 +114,7 @@ body {
       .bar-number {
         position: absolute;
         left: 100%;
-        padding-left: 2px;
+        padding-left: 6px;
       }
       
       &:hover {
@@ -128,10 +128,10 @@ body {
     }
 
     .filler {
-      .flex(0 0 72px);
+      .flex(0 0 76px);
 
       @media @mobile {
-        .flex(0 0 55px);
+        .flex(0 0 59px);
       }
     }
   }
@@ -154,7 +154,8 @@ body {
 .modal {
   .display-flex();
   .flex(0 0 400px);
-  padding-top: 26px;
+  padding-top: 20px;
+  padding-bottom: 41px;
 
   @media @tablet {
     .flex(0 0 340px);
@@ -180,6 +181,10 @@ body {
   padding: 30px 40px;
   background: @df-off-white;
   text-align: center;
+
+  @media @tablet {
+    padding: 30px;
+  }
 
   @media @mobile {
     padding: 20px;
@@ -294,4 +299,8 @@ body {
 .source, .credit {
   font-size: 11.5px;
   color: @df-middle-gray;
+}
+
+.source {
+  padding-top: 6px;
 }

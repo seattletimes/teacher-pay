@@ -37,9 +37,11 @@
             </div>
             <div class="triangle" ng-show="district == featuredDistrict"></div>
           </div>
+          <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
+          <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
         </div>
 
-      <div class="modal" ng-class="{'mobile-show': dialogue}">
+      <div class="modal" >
         <div class="right">
           <%= t.include("card.html") %>
         </div>
@@ -47,8 +49,7 @@
       </div>
     </div>
 
-    <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
-    <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
+
 
     <script>
       var salaryData = <%= JSON.stringify(json.TeacherPay2015_Data) %>
