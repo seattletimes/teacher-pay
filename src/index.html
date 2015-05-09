@@ -10,51 +10,50 @@
   </head>
   
   <body ng-app="teacher-pay">
-     
-    <div ng-controller="SalaryController" ng-cloak>
-      <div class="title">How much are teachers paid?</div>
-      <div class="chatter">Each teacher’s salary varies based on level of experience, level of education and how much his or her school district agrees to add to what the state provides. A number of other factors come into play, too. Everett and Seattle, for example, receive more base pay from the state because they are among nine school districts grandfathered at higher levels long ago.</div>
-      <div class="chatter">This chart looks at the 20 largest school districts in the state, comparing pay at three points in teachers’ careers:  First-year teachers with a B.A.; midcareer teachers in their eighth year and with 90 credits beyond a B.A.; and veterans with master’s degrees, in their 15th year in the classroom and with 45 additional credits.</div>
+    <responsive-child responsive-child interval="500">
+      <div ng-controller="SalaryController" ng-cloak>
+        <div class="title">How much are teachers paid?</div>
+        <div class="chatter">Each teacher’s salary varies based on level of experience, level of education and how much his or her school district agrees to add to what the state provides. A number of other factors come into play, too. Everett and Seattle, for example, receive more base pay from the state because they are among nine school districts grandfathered at higher levels long ago.</div>
+        <div class="chatter">This chart looks at the 20 largest school districts in the state, comparing pay at three points in teachers’ careers:  First-year teachers with a B.A.; midcareer teachers in their eighth year and with 90 credits beyond a B.A.; and veterans with master’s degrees, in their 15th year in the classroom and with 45 additional credits.</div>
 
-      <div class="outer">
-        <div class="left">
-          <span class="point-label"><em>Experience level:</em></span>
-          <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">First-year</div> <span class="divider">|</span>
-          <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Mid-career</div> <span class="divider">|</span>
-          <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">Veteran</div>
+        <div class="outer">
+          <div class="left">
+            <span class="point-label"><em>Experience level:</em></span>
+            <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">First-year</div> <span class="divider">|</span>
+            <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Mid-career</div> <span class="divider">|</span>
+            <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">Veteran</div>
 
-          <br>
-          <div class="legend">
-            <div class="purple swatch"></div> = Base salary
-            <div class="red swatch"></div> = Local pay
-          </div>
-
-          <div class="row-wrapper" ng-repeat="district in districts | orderBy:ordering" flip-on>
-            <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
-              <div class="name">{{district.title}}</div>
-              <div class="bar-container">
-                <div class="base bar" delayed-style="{ width: district['base-'+payPoint+'-bar'] + '%' }"></div>
-                <div class="tri bar" delayed-style="{ width: district['tri-'+payPoint+'-bar'] + '%' }">
-                  <div class="bar-number">${{district['sum-'+payPoint] | number : 0}}</div>
-                </div>
-              </div>
-              <div class="filler"></div>
+            <br>
+            <div class="legend">
+              <div class="purple swatch"></div> = Base salary
+              <div class="red swatch"></div> = Local pay
             </div>
-            <div class="triangle" ng-show="district == featuredDistrict"></div>
+
+            <div class="row-wrapper" ng-repeat="district in districts | orderBy:ordering" flip-on>
+              <div class="row" ng-click="setDistrict(district)" ng-class="{'selected': district == featuredDistrict}" >
+                <div class="name">{{district.title}}</div>
+                <div class="bar-container">
+                  <div class="base bar" delayed-style="{ width: district['base-'+payPoint+'-bar'] + '%' }"></div>
+                  <div class="tri bar" delayed-style="{ width: district['tri-'+payPoint+'-bar'] + '%' }">
+                    <div class="bar-number">${{district['sum-'+payPoint] | number : 0}}</div>
+                  </div>
+                </div>
+                <div class="filler"></div>
+              </div>
+              <div class="triangle" ng-show="district == featuredDistrict"></div>
+            </div>
+            <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
+            <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
           </div>
-          <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
-          <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
-        </div>
 
-      <div class="modal" ng-class="{'mobile-show': dialogue}">
-        <div class="right">
-          <%= t.include("card.html") %>
+        <div class="modal" ng-class="{'mobile-show': dialogue}">
+          <div class="right">
+            <%= t.include("card.html") %>
+          </div>
+        </div>
         </div>
       </div>
-      </div>
-    </div>
-
-
+    </responsive-child>
 
     <script>
       var salaryData = <%= JSON.stringify(json.TeacherPay2015_Data) %>
