@@ -37,7 +37,6 @@ body {
 
 .left {
   .flex(1);
-  padding-bottom: 12px;
 
   .point-label {
     @media @mobile {
@@ -48,7 +47,7 @@ body {
     display: inline-block;
     padding: 5px 10px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     cursor: pointer;
     text-decoration: underline;
     color: @df-dark-gray;
@@ -154,8 +153,8 @@ body {
 .modal {
   .display-flex();
   .flex(0 0 400px);
-  padding-top: 20px;
-  padding-bottom: 41px;
+  padding-top: 42px;
+  padding-bottom: 28px;
 
   @media @tablet {
     .flex(0 0 340px);
@@ -189,6 +188,7 @@ body {
   @media @mobile {
     padding: 20px;
     position: fixed;
+    top: 3%;
     right: 3%;
     left: 3%;
 
@@ -310,4 +310,23 @@ body {
   font-size: 11px;
   text-align: left;
   color: @df-dark-gray;
+}
+
+.legend {
+  font-size: 12px;
+  padding-bottom: 12px;
+
+  .swatch {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+
+    &.red {
+      background: @middle-tri;
+      margin-left: 10px;
+    }
+    &.purple {
+      background: @middle-base;
+    }
+  }
 }

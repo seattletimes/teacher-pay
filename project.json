@@ -5,8 +5,8 @@
       "path": "infinite-swagger"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/education/teacher-pay"
     }
   },
   "title": "",
