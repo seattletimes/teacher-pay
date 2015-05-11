@@ -2,6 +2,7 @@
 require("./lib/social");
 require("./lib/ads");
 require("angular");
+require("component-responsive-frame/child");
 
 var app = angular.module("teacher-pay", []);
 
