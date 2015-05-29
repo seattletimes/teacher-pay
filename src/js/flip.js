@@ -25,7 +25,7 @@ module.exports = function(app) {
           //read position
           var _ = el.offsetWidth;
           el.classList.add("flipping");
-          el.style.transform = `translate(0)`;
+          el.style[transform] = `translate(0)`;
           first = last;
           setTimeout(() => el.classList.remove("flipping"), 1000);
         });

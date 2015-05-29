@@ -17,8 +17,7 @@ body {
 .outmost {
   border-top: 1px solid @df-border-gray;
   border-bottom: 1px solid @df-border-gray;
-  margin: 15px 0;
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 .title {
@@ -80,6 +79,7 @@ body {
     position: relative;
     &.flipping {
       transition: transform .5s ease-in-out .5s;
+      transition: -webkit-transform .5s ease-in-out .5s;
     }
   }
 
