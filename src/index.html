@@ -14,13 +14,14 @@
       <div class="outmost" ng-controller="SalaryController" ng-cloak>
         <div class="title">How much are teachers paid?</div>
         <div class="chatter">Each teacher’s salary varies based on level of experience, level of education and how much his or her school district agrees to add to what the state provides. A number of other factors come into play, too. Everett and Seattle, for example, receive more base pay from the state because they are among nine school districts grandfathered at higher levels long ago.</div>
-        <div class="chatter">This chart looks at the 20 largest school districts in the state, comparing pay at three points in teachers’ careers:  First-year teachers with a B.A.; midcareer teachers in their eighth year and with 90 credits beyond a B.A.; and veterans with master’s degrees, in their 15th year in the classroom and with 45 additional credits.</div>
+        <div class="chatter">This chart looks at the 20 largest school districts in the state during the 2014-2015 school year, comparing pay at three points in teachers’ careers:  First-year teachers with a B.A.; midcareer teachers in their eighth year and with 90 credits beyond a B.A.; and veterans with master’s degrees, in their 15th year in the classroom and with 45 additional credits.</div>
+        <div class="note"><em>Note: This interactive previously included a measure of students per teacher for each district, including all certificated staff, such as librarians, P.E. and art teachers and other specialists. This measure was removed because many readers mistakenly interpreted it as a measure of class size.</em></div>
 
         <div class="outer">
           <div class="left">
             <span class="point-label"><em>Experience level:</em></span>
-            <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">First-year</div> <span class="divider">|</span>
-            <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Mid-career</div> <span class="divider">|</span>
+            <div ng-click="setPayPoint('low')" class="point-button" ng-class="{'selected': payPoint == 'low'}">First-year</div>
+            <div ng-click="setPayPoint('middle')" class="point-button" ng-class="{'selected': payPoint == 'middle'}">Mid-career</div>
             <div ng-click="setPayPoint('high')" class="point-button" ng-class="{'selected': payPoint == 'high'}">Veteran</div>
 
             <br>
@@ -42,6 +43,7 @@
               </div>
               <div class="triangle" ng-show="district == featuredDistrict"></div>
             </div>
+
             <div class="source"><em>Sources: Office of Superintendent of Public Instruction; Seattle Times reporting</em></div>
             <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
           </div>

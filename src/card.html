@@ -4,12 +4,10 @@
 
 <div class="line"></div>
 
-<div class="label">Students</div>
+<div class="label">Students*</div>
 <div class="value">{{featuredDistrict["fte-students"] | number : 0}}</div>
-<div class="label">Teachers</div>
+<div class="label">Teachers*</div>
 <div class="value">{{featuredDistrict["fte-teachers"] | number : 0}}</div>
-<div class="label">Students per teacher</div>
-<div class="value">{{featuredDistrict["students-per-teacher"]}}</div>
 <div class="label">Average experience</div> 
 <div class="value">{{featuredDistrict["avg-exp"]}} years</div>
 
@@ -38,4 +36,6 @@
   </tr>
 </table>
 
-<div class="data-source"><em>Salary data are from the 2014-2015 school year, student and teacher counts are full-time equivalents from the 2013-2014 school year.</em></div>
+<div class="data-source">
+  <em>*Student and teacher counts are full-time equivalents..</em>
+</div>
